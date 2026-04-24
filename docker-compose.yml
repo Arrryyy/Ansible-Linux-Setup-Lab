@@ -1,0 +1,35 @@
+services:
+
+  control:
+    build: ./control
+    container_name: control
+    volumes:
+      - ./playbooks:/ansible
+    depends_on:
+      - node1
+      - node2
+      - node3
+    networks:
+      - ansible-lab
+
+  node1:
+    build: ./node1
+    container_name: node1
+    networks:
+      - ansible-lab
+
+  node2:
+    build: ./node2
+    container_name: node2
+    networks:
+      - ansible-lab
+
+  node3:
+    build: ./node3
+    container_name: node3
+    networks:
+      - ansible-lab
+
+networks:
+  ansible-lab:
+    driver: bridge
