@@ -1,4 +1,4 @@
-# Ansible Linux Setup Lab 🚀
+# Ansible Linux Setup Lab 
 
 A fully Dockerized Ansible learning environment where you'll master Infrastructure-as-Code by automating real Linux server configurations—all locally, for free, with zero cloud dependencies.
 
