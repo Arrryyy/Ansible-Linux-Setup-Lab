@@ -2,16 +2,16 @@
 
 ## 1. Project Goal
 
-This project takes you from basic Ansible commands to production-ready infrastructure automation. You'll deploy a complete 3-tier web stack (web server, app server, database) across multiple servers, each configured for its specific role.
+This project takes basic Ansible commands to production-ready infrastructure automation. I'll deploy a complete 3-tier web stack (web server, app server, database) across multiple servers, each configured for its specific role.
 
 **Key Features:**
 - Real-world Ansible uses roles for reusable, organized code
-- Host groups let you target servers by function (webservers, appservers, dbservers)
+- Host groups let me target servers by function (webservers, appservers, dbservers)
 - Templates make configs dynamic and environment-aware
 - Handlers ensure services restart only when needed
-- This is how you automate complex, multi-server applications
+- This is how I automate complex, multi-server applications
 
-**What You'll Build:**
+**What I'll Build:**
 A fully functional web stack where:
 - Nginx serves static files and proxies to Flask
 - Flask app connects to PostgreSQL database
@@ -19,14 +19,14 @@ A fully functional web stack where:
 - The stack is ready for production traffic
 
 **Step Up from Project 1:**
-Project 1 was about connectivity and basic commands. Here, you'll use Ansible's advanced features to manage a distributed application—roles, templates, and service management.
+Project 1 was about connectivity and basic commands. Here, I'll use Ansible's advanced features to manage a distributed application—roles, templates, and service management.
 
 ---
 
 ## 2. Architecture
 
 ### The Web Stack Setup
-Your lab deploys a classic 3-tier architecture:
+My lab deploys a classic 3-tier architecture:
 - **Control Node** — Ansible runs here, orchestrates the deployment
 - **node1 (Web Server)** — Nginx web server, handles HTTP requests
 - **node2 (App Server)** — Python Flask application, business logic
@@ -40,7 +40,7 @@ Your lab deploys a classic 3-tier architecture:
 ### ASCII Diagram
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     Your Host Machine                        │
+│                     My Host Machine                        │
 │                                                               │
 │  docker-compose up → Deploys the full stack                │
 │                                                               │
@@ -87,7 +87,7 @@ User → Nginx (node1:80) → Flask (node2:5000) → PostgreSQL (node3:5432)
 ## 3. Prerequisites
 
 **Required:**
-- **Project 1 Completed** — You know how to start the lab and run basic Ansible commands
+- **Project 1 Completed** — I know how to start the lab and run basic Ansible commands
 - **Docker & Docker Compose** — Same as Project 1
 - **Basic Ansible Knowledge** — Playbooks, inventory, modules
 - **Terminal Comfort** — Editing files, running commands
@@ -118,7 +118,7 @@ Ansible-Web-Stack/
 ├── node1/, node2/, node3/              # Managed nodes (web, app, db roles)
 │   ├── Dockerfile                      # Ubuntu + SSH + role-specific packages
 │   └── entrypoint.sh                   # SSH setup + initial user creation
-├── playbooks/                          # YOUR PLAYBOOKS — edit locally
+├── playbooks/                          # MY PLAYBOOKS — edit locally
 │   ├── site.yml                        # Main playbook (includes all roles)
 │   ├── inventory.ini                   # Host inventory with groups
 │   ├── group_vars/                     # Group-level variables
@@ -172,7 +172,7 @@ Key Insights:
 
 ### Step 1: Switch to the Project Branch
 ```bash
-cd /path/to/your/ansible/project
+cd /path/to/my/ansible/project
 git checkout project-2-web-stack
 # Or create it if it doesn't exist:
 # git checkout -b project-2-web-stack
@@ -181,7 +181,7 @@ git checkout project-2-web-stack
 ### Step 2: Verify the Project Structure
 ```bash
 ls -la
-# You should see: control/, node1/, node2/, node3/, docker-compose.yml, playbooks/, README.md
+# I should see: control/, node1/, node2/, node3/, docker-compose.yml, playbooks/, README.md
 ```
 
 ### Step 3: Build and Start the Web Stack Lab
@@ -208,7 +208,7 @@ Should show control, node1, node2, node3 as "Up".
 docker-compose exec control bash
 ```
 
-You're now in the control node at `/ansible#`.
+I'm now in the control node at `/ansible#`.
 
 ### Step 6: Test Connectivity
 ```bash
@@ -228,7 +228,7 @@ This applies roles to each host group:
 - dbservers (node3) → PostgreSQL role
 
 ### Step 8: Verify the Stack Works
-From your host machine:
+From my host machine:
 ```bash
 # Check if Nginx is serving
 curl http://localhost  # Should proxy to Flask
@@ -250,7 +250,7 @@ docker-compose exec node1 bash
 ## 6. How It Works
 
 ### Host Groups in Inventory
-Instead of targeting "all" nodes the same way, you group them by function:
+Instead of targeting "all" nodes the same way, I group them by function:
 ```
 [webservers]
 node1
@@ -360,14 +360,14 @@ Manage services declaratively:
 
 ### Project 3: Docker Provisioning with Ansible
 Take automation to the next level:
-- Use Ansible to deploy Docker containers across your infrastructure
+- Use Ansible to deploy Docker containers across my infrastructure
 - Manage containerized applications at scale
 - Combine Ansible with Docker Compose for full stack orchestration
 - Learn container networking, volumes, and service discovery
 
 ### Career Progression
-- **DevOps Engineer** — You're automating deployments now
-- **Site Reliability Engineer** — Roles and templates are your toolkit
+- **DevOps Engineer** — I'm automating deployments now
+- **Site Reliability Engineer** — Roles and templates are my toolkit
 - **Platform Engineer** — Build self-service infrastructure platforms
 - **Cloud Architect** — Use Ansible as part of large-scale infrastructure management
 
@@ -377,7 +377,7 @@ Take automation to the next level:
 - Ansible Vault for secrets management
 - Dynamic inventories from cloud providers
 
-You've got the web stack running—now scale it up!
+I've got the web stack running—now scale it up!
 
 ---
 
@@ -422,7 +422,7 @@ Happy deploying! This is where Ansible gets real.
 
 ## Contributing & Next Steps
 
-This is your learning lab! Suggestions:
+This is my learning lab! Suggestions:
 - Add more playbooks for advanced tasks
 - Experiment with roles and templates
 - Add a 4th stage: web application deployment
