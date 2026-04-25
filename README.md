@@ -1,12 +1,7 @@
 # Ansible Web Stack Deployment
 
-**Project 2** in the Ansible Learning Series. You've mastered the basics in Project 1—now let's deploy a real web application stack using Ansible roles, templates, and host groups.
-
----
-
 ## 1. Project Goal
 
-**What You'll Build:**
 This project takes you from basic Ansible commands to production-ready infrastructure automation. You'll deploy a complete 3-tier web stack (web server, app server, database) across multiple servers, each configured for its specific role.
 
 **Key Features:**
